@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab08.HelloController">
+    <children>
+        <TableView fx:id="tableView" layoutX="18.0" layoutY="37.0" prefHeight="309.0" prefWidth="679.0">
+            <columns>
+                <TableColumn fx:id="colSID" prefWidth="75.0" text="Student ID" />
+                <TableColumn fx:id="colAssignments" prefWidth="75.0" text="Assignment" />
+                <TableColumn fx:id="colMidterm" prefWidth="75.0" text="Midterm" />
+                <TableColumn fx:id="colExam" prefWidth="75.0" text="Exam" />
+                <TableColumn fx:id="colFinalGrade" prefWidth="75.0" text="Final Grade" />
+                <TableColumn fx:id="colLetterGrade" prefWidth="75.0" text="Letter Grade" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <TextField fx:id="textfieldID" layoutX="18.0" layoutY="369.0" promptText="Student ID" />
+        <TextField fx:id="textfieldMidterm" layoutX="18.0" layoutY="408.0" promptText="Midterm Grade" text="Close" />
+        <TextField fx:id="textfieldAssignment" layoutX="209.0" layoutY="371.0" promptText="Assignment Grade" />
+        <TextField fx:id="textfieldExam" layoutX="209.0" layoutY="408.0" promptText="Exam Grade" />
+        <Button layoutX="396.0" layoutY="374.0" mnemonicParsing="false" onAction="#buttonAdd" text="Add" />
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuNew" mnemonicParsing="false" onAction="#menuNew" text="New" />
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#menuLoad" text="Open" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" text="Save As" />
+                  <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#menuExit" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>
